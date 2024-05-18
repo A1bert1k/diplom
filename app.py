@@ -4,7 +4,9 @@ import os
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL')
+
+# Настройка SQLAlchemy с использованием DATABASE_URL
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://diplom_jgj4_user:VM4uNpRdVKAqmcom58Qq8MnFuM7t2k8I@dpg-cp43gu0cmk4c73edojpg-a:5432/diplom_jgj4"
 db = SQLAlchemy(app)
 
 # Таблица "Клиенты" (Clients)
